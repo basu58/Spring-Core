@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="bike" class="com.basu.beans.Bike" >
+		<property name="make" value="pulsor Engine"/>
+		<property name="engineCC" value="200CC"/>
+	</bean>
+	<bean id="pulsor1" class="com.basu.beans.Bike" parent="bike">
+		<property name="id" value="123456"/>
+	</bean>
+	<bean id="pulsor2" class="com.basu.beans.Bike" parent="bike">
+		<property name="id" value="654321"/>
+	</bean>
+</beans>

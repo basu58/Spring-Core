@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="bikes" class="com.basu.beans.Bikes" abstract="true">
+		<property name="bike_name">
+			<list>
+				<value>Bajaj Pulsar</value>
+				<value>Tvs apache</value>
+			</list>
+		</property>
+	</bean>  
+	<bean id="bike1" class="com.basu.beans.Bikes" parent="bikes">
+		<property name="bike_name">
+			<list merge="true">
+				<value>Roya Enfield 500cc</value>
+			</list>
+		</property>
+	</bean>   
+	<bean id="bike2" class="com.basu.beans.Bikes" parent="bikes">
+		<property name="bike_name">
+			<list merge="true">
+				<value>Roya Enfield 400cc</value>
+			</list>
+		</property>
+	</bean>      
+</beans>

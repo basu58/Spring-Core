@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+		<bean id="agent" class="com.basu.beans.TravelAgent" autowire="byType"/>
+	<bean id="tp" class="com.basu.beans.TourPlan" primary="true">
+		<property name="places">
+			<list>
+				<value>America</value>
+				<value>Switzerland</value>
+				<value>India</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="tp2" class="com.basu.beans.TourPlan">
+		<property name="places">
+			<list>
+				<value>Zamaica</value>
+				<value>Canada</value>
+				<value>Brazil</value>
+			</list>
+		</property>
+	</bean>
+	
+</beans>
+	

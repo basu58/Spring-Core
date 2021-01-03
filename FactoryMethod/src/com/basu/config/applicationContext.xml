@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="c1" class="java.lang.Class" factory-method="forName">
+		<constructor-arg value="java.util.Date"/>
+	</bean>        
+	<bean id="c2" class="java.util.Calendar" factory-method="getInstance"/>
+	
+	<bean id="s1" class="java.lang.String">
+		<constructor-arg value="Hello, "/>
+	</bean>
+	<bean id="s2" factory-bean="s1" factory-method="concat">
+		<constructor-arg value="Basudev"/>
+	</bean>
+	<bean id="sb" class="java.lang.StringBuffer">
+		<constructor-arg value="Hello, How are you?"/>
+	</bean>
+	<bean id="sb1" factory-bean="sb" factory-method="subString">
+		<constructor-arg value="0"/>
+		<constructor-arg value="4"/>
+	</bean>
+</beans>
+        

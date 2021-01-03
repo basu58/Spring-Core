@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="tp" class="com.basu.beans.Triangle_Point">
+		<property name="a" ref="p"></property>
+		<property name="b">
+			<bean class="com.basu.beans.Point">
+				<property name="x" value="2"/>
+				<property name="y" value="3"/>
+			</bean>
+		</property>
+		<property name="c">
+			<bean class="com.basu.beans.Point">
+				<property name="x" value="4"/>
+				<property name="y" value="5"/>
+			</bean>
+		</property>
+	</bean>
+	<bean id="p" class="com.basu.beans.Point">
+		<property name="x" value="0"/>
+		<property name="y" value="0"/>
+	</bean>
+	<alias name="tp" alias="target"/>
+</beans>
